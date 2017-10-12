@@ -38,7 +38,7 @@ public class HelloController {
         CursoredList<TwitterProfile> friends = twitter.friendOperations().getFriends();
         model.addAttribute("friends", friends);
         List<Tweet> timeLine = twitter.timelineOperations().getUserTimeline();
-        model.addAttribute("tweet", timeLine.get(3).getText());
+        model.addAttribute("tweets", timeLine.subList(0, 10));
         return "hello";
     }
 

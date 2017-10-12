@@ -11,6 +11,10 @@
 			<li th:each="friend:${friends}" th:text="${friend.name}">Friend</li>
 		</ul>
 
-        Tweet: <span th:text="${tweet}">Some User</span>
+        <h4>Last Tweets</h4>
+        <ul>
+        <li th:each="tweet:${tweets}" th:text="${tweet.text}">Friend</li>
+        </ul>
+
 	</body>
 </html>
